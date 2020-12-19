@@ -32,6 +32,7 @@ using ConsumptionFuc = std::function<StatusOr<int64_t>()>;
 
 class MemTracker : public std::enable_shared_from_this<MemTracker> {
     FRIEND_TEST(MemTrackerTest, MockOutOfMemory);
+    FRIEND_TEST(MemTrackerTest, RSSTest);
 
 public:
     explicit MemTracker(const std::string& id,
